@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_partner_customer,res.partner,base.model_res_partner,food_customer_role,1,1,1,0
+access_category_details_customer,category.details,model_category_details,food_customer_role,1,0,0,0
+access_products_details_customer,products.details,model_products_details,food_customer_role,1,0,0,0
+access_orders_details_customer,orders.details,model_orders_details,food_customer_role,1,1,1,0
+access_payment_details_customer,payment.details,model_payment_details,food_customer_role,1,1,1,0
+access_orderline_details_customer,orderline.details,model_orderline_details,food_customer_role,1,0,1,0
+,,,,,,,
+access_category_details_admin,category.details,model_category_details,base.group_erp_manager,1,1,1,1
+access_products_details_admin,products.details,model_products_details,base.group_erp_manager,1,1,1,1
+access_orders_details_admin,orders.details,model_orders_details,base.group_erp_manager,1,1,1,1
+access_payment_details_admin,payment.details,model_payment_details,base.group_erp_manager,1,1,1,1
+access_orderline_details_admin,orderline.details,model_orderline_details,base.group_erp_manager,1,1,1,1

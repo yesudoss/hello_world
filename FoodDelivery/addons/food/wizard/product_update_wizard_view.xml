@@ -1,0 +1,33 @@
+<odoo>
+    <record id="view_product_update_wizard" model="ir.ui.view">
+        <field name="name">productupdate.wizard</field>
+        <field name="model">productupdate.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Product">
+                <group>
+                    <group>
+                        <field name="product_id"></field>
+                        <field name="currency_id" invisible="True"></field>
+                    
+                    </group>
+                    <group>
+                    	    <field name="cost"></field>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Update Product Cost" name="update_product" type="object" confirm="are you sure you want to update" class="btn-primary"/>
+                    <button string="Cancel" clas="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+
+    </record>
+
+     <record id="product_update_wizard_details_action" model="ir.actions.act_window">
+            <field name="name">Product Details</field>
+            <field name="res_model">productupdate.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <menuitem id="product_update_wizard_menu" name="Product Cost" parent="menu_wizard" action="product_update_wizard_details_action"/>
+</odoo>

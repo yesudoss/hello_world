@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- <menuitem id="customers_menu" name="Customer" action="customers_action"></menuitem> -->
+       	<menuitem id="orders_menu" name="Food Orders" action="orders_action" web_icon="food,static/description/icon.png"></menuitem>
+        <!-- <menuitem id="res_partner_menu" name="res" action="res_partner_action" parent="orders_menu"></menuitem> -->
+        <menuitem id="payment_menu" name="Payments" action="payment_action" parent="orders_menu"></menuitem>
+        <menuitem id="config_menu" name="Configuration" parent="orders_menu" groups="base.group_erp_manager"/>
+		<menuitem id="products_menu" name="Products" action="products_action" parent="config_menu"></menuitem>
+        <menuitem id="category_menu" name="Categories" action="category_action" parent="config_menu"></menuitem>
+        <menuitem id="unit_of_measure_food" name="Unit of Measure" action="uom.product_uom_form_action" parent="config_menu"></menuitem>
+
+        <menuitem id="menu_wizard" name="Wizard" parent="orders_menu" groups="base.group_erp_manager"/>
+<!--         <menuitem id="pay_wizard_menu" name="Payment" parent="menu_wizard" action="payments_wizard_details_action"/> -->
+    </data>
+</odoo>

@@ -1,0 +1,400 @@
+<odoo>
+	<!-- This template is used to print dynamic data (from DB data) from model(DB) In a TABLE -->        
+        <template id="product_template">
+            <t t-call="website.layout">
+                <t t-set="title">Food Products</t>
+                <div class="oe_structure">
+                    <div class="container">
+                    <br/>
+                    <form action="/products/delete" method="post" data-model_name="products.details" enctype="multipart/form-data" data-success_page="/thanks" class="s_website_form form-horizontal container-fluid mt32" >
+                	<a t-attf-href="/products/create" class="btn btn-outline-success">Create</a>
+                	<br />
+                	<br />
+                    	<!-- <table border="2" width="100%" class="table-striped table"> -->
+                    	 <table  class="mb16 table table-striped table-sm js_cart_lines"> 
+                    		<thead class="font-weight-bolder">
+                        		<td>Name</td>
+                        		<td>Food Type</td>
+                        		<td>Category</td>
+                        		<td>Food Cost</td>
+                        		<td>Status</td>
+                        		<td></td>
+                        	</thead>
+                        	<tbody>
+                        		<t t-foreach="prod_data" t-as="rec">
+                        			<tr>
+                        				 <td>
+                        				 	<a t-att-href="'/products/details/%s' % slug(rec)" itemprop="url">
+                        				 		<t t-esc="rec.name"/>
+                        				 	</a>
+                        				 </td>
+                        				 <td><t t-esc="rec.type"/></td>
+                        				 <td><t t-esc="rec.category_id.name"/></td>
+                        				 <td><t t-esc="rec.cost"/></td>
+                        				 <td><t t-esc="rec.status"/></td>
+                        				 <td>
+                        				 	 <a t-attf-href="/products/delete/{{rec.id}}" aria-label="Remove" title="Remove"> <small><i class='fa fa-trash-o'></i> </small></a>
+                        				 	 <a t-attf-href="/products/edit/{{rec.id}}" aria-label="Edit" title="Edit"> <small><i class='fa fa-pencil'></i> </small></a> 
+                        				 </td>
+                        			</tr>	   
+                        		</t>
+                        	</tbody>
+	                    </table>
+	                    </form>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+<!-- To fetch and show products details widely  -->        
+    <template id="template_products_details">
+    	<t t-call="website.layout">
+    	 <t t-set="title">Food Product Details</t>
+        	<div class="oe_structure">
+            	<div class="container">
+                	<h3>Product Details</h3>
+                	<br />
+                	<h4></h4>
+                	<t t-foreach="prod_data" t-as="rec">
+                	<!-- <span t-field="rec.img" t-options="{'widget': 'image', 'qweb_img_responsive': True, 'class': 'rounded o_image_64_max'}" />
+                		
+                		<br /><div t-field="rec.img" t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'rounded shadow o_alternative_product o_image_64_max' }" /> -->
+                		<div class="form-row">
+	    					<div class="col-2 ">
+	    						<h4>Name</h4>
+					      		<!-- <input type="text" class="form-control" placeholder="First name"></input> -->
+					    	</div>
+						    <div class="col-2">
+						    	<t t-esc="rec.name"/>
+						      <!-- <input type="text" class="form-control" placeholder="Last name"></input> -->
+						    </div>
+				  		</div>
+				  		<div class="form-row">
+	    					<div class="col-2">
+	    						<h4>Type</h4>
+					    	</div>
+						    <div class="col-2">
+						    	<t t-esc="rec.type"/>
+						    </div>
+				  		</div>
+				  		<div class="form-row">
+	    					<div class="col-2">
+	    						<h4>Category</h4>
+					    	</div>
+						    <div class="col-2">
+						    	<t t-esc="rec.category_id.name"/>
+						    </div>
+				  		</div>
+				  		<div class="form-row">
+	    					<div class="col-2">
+	    						<h4>Cost</h4>
+					    	</div>
+						    <div class="col-2">
+						    	<t t-esc="rec.cost"/>
+						    </div>
+				  		</div>
+				  		<div class="form-row">
+	    					<div class="col-2">
+	    						<h4>Image</h4>
+					    	</div>
+						    <div class="col-2">
+						    <span t-field="rec.img" t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'rounded o_image_64_max'}" />
+							    <!-- <span t-field="rec.img" t-field-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;img-rounded&quot;}"/> -->
+						    	<!-- <t t-esc="rec.img"/> -->
+						    </div>
+				  		</div>
+                	</t>
+                	
+                	<br />
+            	</div>
+        	</div>
+    	</t>
+	</template>
+	
+	
+	   <template id="products_create">
+            <t t-call="website.layout">
+                <t t-set="title">Product</t>
+                <div class="oe_structure">
+                    <div class="container">
+       					<form action="/products/create/save" method="post" data-model_name="products.details" enctype="multipart/form-data" data-success_page="/thanks" class="s_website_form form-horizontal container-fluid mt32" >    
+<!--      	   add the input fields here -->
+       						<div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Name">Product Name</label>
+			                    </div>
+			                    <div class="col-lg-7 col-md-8">
+			                        <input type="text" class="form-control o_website_form_input" name="name" required=""/>
+			                    </div>
+			                </div>
+			                
+			                <div class="form-group row form-field o_website_form_custom">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Name">Product Image</label>
+			                    </div>
+			                    <div class="col-lg-7 col-md-8">
+			                        <input type="file" name="img" alt="Submit" width="48" height="48"/>
+			                        <!-- <input type="file" alt="Submit" style="float:right" width="48" height="48" name="img" required=""/> -->
+			                    </div>
+			                </div>
+			                
+			                <div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Name">Food Type</label>
+			                    </div>
+			                    <div class=""></div>
+			                    <div class="col-lg-7 col-md-8">
+			                    	<input type="radio" checked="checked" class=".col-xs-6 .col-sm-3" value="veg" name="type" required="1">Vegetarian</input>
+                 					<input type="radio" class=".col-xs-6 .col-sm-3" value="non_veg" name="type" required="1">Non Vegetarian</input>
+			                    </div>
+			                </div>
+
+							<div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Name">Category</label>
+			                    </div>
+			                    <div class="col-lg-7 col-md-8">
+				                    <select required="1" name="category_id" class="form-control o_website_form_input">
+	                                    <t t-foreach="data[0]" t-as="rec">
+	                                        <option t-att-value="rec.id"><t t-esc="rec.name"/> </option>
+	                                    </t>
+	                                </select>   
+			                    </div>
+			                </div>
+        					
+        					<!-- <div t-attf-class="form-group #{error.get('street') and 'o_has_error' or ''} col-lg-12 div_street">
+                                  <label class="col-form-label" for="street">Street <span class="d-none d-md-inline"> and Number</span></label>
+                                  <input type="text" name="street" t-attf-class="form-control #{error.get('street') and 'is-invalid' or ''}" t-att-value="'street' in checkout and checkout['street']" />
+                              </div> -->
+    
+    
+            				<!-- 	<div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+				                    <div class="col-lg-3 col-md-4">
+				                        <label class="col-form-label" for="Name">Product Cost</label>
+				                    </div>
+				                    <div t-attf-class="form-group #{error.get('cost') and 'o_has_error' or ''} col-lg-7 col-md-8">
+				                        <input type="text" t-attf-class="form-control  o_website_form_input #{error.get('cost') and 'is-invalid' or ''}"  name="cost" required=""/>
+				                     onchange="return validateCost()"
+				                    </div>
+				                </div> -->
+	        					
+        					
+         					<div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Name">Product Cost</label>
+			                    </div>
+			                    <div class="col-lg-7 col-md-8">
+			                        <input type="text" class="form-control o_website_form_input" onchange="return validateCost()" name="cost" required=""/>
+			                   <!--   onchange="return validateCost()" -->
+			                    </div>
+			                </div>
+       						<div class="form-group row form-field o_website_form_custom ">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Description">Description</label>
+			                    </div>
+			                    <div class="col-lg-7 col-md-8">
+			                        <textarea class="form-control o_website_form_input" name="description"></textarea>
+			                    </div>
+			                </div>
+        					
+       						<div class="form-group"> 
+            					<div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7"> 
+                					<input type='submit' class="btn btn-primary btn-lg "/> 
+                					<span id="o_website_form_result"></span> 
+            					</div> 
+       						</div>
+						</form>
+					</div>
+				</div>
+			</t>
+			<script type="text/javascript" src="/food/static/src/js/controller_validation.js"/>
+		</template>
+
+		<template id="products_edit">
+            <t t-call="website.layout">
+                <t t-set="title">Edit Product</t>
+                <div class="oe_structure">
+                    <div class="container">
+       					<form action="/products/edit/save" method="post" data-model_name="products.details" enctype="multipart/form-data" data-success_page="/thanks" class="s_website_form form-horizontal container-fluid mt32" >    
+<!--      	   add the input fields here -->
+							<div class="form-group"> 
+            					<div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7"> 
+                					<a t-attf-href="/products" class="btn btn-outline-success">Products</a>
+                					<span id="o_website_form_result"></span> 
+            					</div> 
+       						</div>
+							
+       						<div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Name">Product Name</label>
+			                    </div>
+			                    <div class="col-lg-7 col-md-8">
+			                        <input type="text" t-att-value="prod.name" class="form-control o_website_form_input" name="name" required=""/>
+			                    </div>
+			                </div>
+			                
+			                <div class="form-group row form-field o_website_form_custom">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Name">Product Image</label>
+			                    </div>
+			                    <div class="col-lg-7 col-md-8">
+			                        <input type="file" t-att-value="prod.img" name="img" alt="Submit" width="48" height="48"/>
+			                        <!-- <input type="file" alt="Submit" style="float:right" width="48" height="48" name="img" required=""/> -->
+			                    </div>
+			                </div>
+			                
+			                <div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Name">Food Type</label>
+			                    </div>
+			                    <div class=""></div>
+			                    <div class="col-lg-7 col-md-8">
+			                    	<input type="radio" checked="checked" class=".col-xs-6 .col-sm-3" value="veg" name="type" required="1">Vegetarian</input>
+                 					<input type="radio" class=".col-xs-6 .col-sm-3" value="non_veg" name="type" required="1">Non Vegetarian</input>
+			                    </div>
+			                </div>
+
+							<div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Name">Category</label>
+			                    </div>
+			                    <div class="col-lg-7 col-md-8">
+				                    <select required="1" name="category_id" class="form-control o_website_form_input">
+	                                    <t t-foreach="data[0]" t-as="rec">
+	                                        <option t-att-value="rec.id"><t t-esc="rec.name"/> </option>
+	                                    </t>
+	                                </select>   
+			                    </div>
+			                </div>
+	        					
+         					<div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Name">Product Cost</label>
+			                    </div>
+			                    <div class="col-lg-7 col-md-8">
+			                        <input type="text" t-att-value="prod.cost" class="form-control o_website_form_input" name="cost" required=""/>
+			                    </div>
+			                </div>
+       						<div class="form-group row form-field o_website_form_custom ">
+			                    <div class="col-lg-3 col-md-4">
+			                        <label class="col-form-label" for="Description">Description</label>
+			                    </div>
+			                    <div class="col-lg-7 col-md-8">
+			                        <textarea t-attf-value="prod.description" class="form-control o_website_form_input" name="description"></textarea>
+			                    </div>
+			                </div>
+        					
+       						<div class="form-group"> 
+            					<div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7"> 
+                					<input type='submit' class="btn btn-primary btn-lg "/> 
+                					<span id="o_website_form_result"></span> 
+            					</div> 
+       						</div>
+						</form>
+					</div>
+				</div>
+			</t>
+		</template>
+		
+		
+	
+    <template id="template_create_feedback">
+    	<t t-call="website.layout">
+    	 <t t-set="title">Feedback</t>
+        	<div class="oe_structure">
+            	<div class="container">
+                	<h3>Feedback Form</h3>
+                	<form id="feed_form" t-ignore="true" action="/feedback_form/" method="post" data-model_name="" class="s_website_form container-fluid mt32" enctype="multipart/form-data" data-success_page="/thanks">
+                <div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+                    <div class="col-lg-3 col-md-4">
+                        <label class="col-form-label" for="Name">Your Name</label>
+                    </div>
+                    <div class="col-lg-7 col-md-8">
+                        <input type="text" class="form-control o_website_form_input" name="Name" required=""/>
+                    </div>
+                </div>
+                <div class="form-group row form-field o_website_form_custom">
+                    <div class="col-lg-3 col-md-4">
+                        <label class="col-form-label" for="Phone">Phone Number</label>
+                    </div>
+                    <div class="col-lg-7 col-md-8">
+                        <input type="text" class="form-control o_website_form_input" name="Phone"/>
+                    </div>
+                </div>
+                <div class="form-group row form-field o_website_form_required_custom">
+                    <div class="col-lg-3 col-md-4">
+                        <label class="col-form-label" for="email_from">Email</label>
+                    </div>
+                    <div class="col-lg-7 col-md-8">
+                        <input type="email" class="form-control o_website_form_input" name="email_from" required=""/>
+                    </div>
+                </div>
+<!--                 <div class="form-group row form-field o_website_form_custom">
+                    <div class="col-lg-3 col-md-4">
+                        <label class="col-form-label" for="Partner Name">Your Company</label>
+                    </div>
+                    <div class="col-lg-7 col-md-8">
+                        <input type="text" class="form-control o_website_form_input" name="Partner Name"/>
+                    </div>
+                </div> -->
+                <div class="form-group row form-field o_website_form_required_custom">
+                    <div class="col-lg-3 col-md-4">
+                        <label class="col-form-label" for="subject">Subject</label>
+                    </div>
+                    <div class="col-lg-7 col-md-8">
+                        <input type="text" class="form-control o_website_form_input" name="subject" required=""/>
+                    </div>
+                </div>
+                <div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+                    <div class="col-lg-3 col-md-4">
+                        <label class="col-form-label" for="Description">Your Suggestion</label>
+                    </div>
+                    <div class="col-lg-7 col-md-8">
+                        <textarea class="form-control o_website_form_input" name="Description" required=""></textarea>
+                    </div>
+                </div>
+<!--                 <div class="form-group row form-field d-none">
+                    <div class="col-lg-3 col-md-4">
+                        <label class="col-form-label" for="email_to">Email To</label>
+                    </div>
+                    <div class="col-lg-7 col-md-8">
+                        <input type="hidden" class="form-control o_website_form_input" name="email_to" t-att-value="res_company.email"/>
+                    </div>
+                </div> 
+-->
+                <div class="form-group row">
+                    <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                        <a href="#" class="btn btn-primary btn-lg o_website_form_send">Send</a>
+                        <span id="o_website_form_result"></span>
+                    </div>
+                </div>
+            </form>
+                </div>
+        	</div>
+    	</t>
+	</template>
+
+	
+	
+	<template id="template_thanks" name="Thanks">
+        <t t-call="website.layout">
+         <t t-set="title">Thanks</t>
+            <div id="wrap">
+                <div class="container">
+                    <div class="col-md-12">
+                        <a t-attf-href="/products" class="btn btn-link">Back to Products</a><br/>
+                        <div class="alert alert-success">
+							<center>
+	                           Thank you!!! 
+	                           <br />
+	                           Have a Nice Day!
+							</center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+	
+	
+</odoo>

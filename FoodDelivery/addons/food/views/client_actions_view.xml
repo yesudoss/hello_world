@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_food_client_view" model="ir.actions.client">
+            <field name="name">Food Orders Dashboard</field>
+            <field name="tag">food_dashboard</field>
+<!--             <field name="target">fullscreen</field> -->
+             <field name="target">new</field> 
+            
+<!--             <field name="target">current</field> -->
+<!--             <field name="target">main</field> -->
+        </record>
+        <menuitem id="dashboard_menu" name="Dashboard" sequence="1" parent="food.orders_menu" action="action_food_client_view"/>
+
+        <template id="assets_backend_dashboard" name="Dashboard Asset" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/food/static/src/js/food_client.js"/>
+                <!-- <link rel="stylesheet" href="/food/static/src/css/style.css"/> -->
+            </xpath>
+        </template>
+    </data>
+
+    <data>
+        <record id="action_food_sample_client_view" model="ir.actions.client">
+            <field name="name">Sample</field>
+            <field name="tag">food_dash</field>
+             <field name="target">main</field>
+            
+        </record>
+        <menuitem id="dashboard_sample_menu" name="Sample" sequence="1" parent="food.orders_menu" action="action_food_sample_client_view"/>
+
+         <template id="assets_backend_dashboard_sample" name="Dashboard Asset" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+               <script type="text/javascript" src="/food/static/src/js/sample.js"/>
+             </xpath>
+        </template> 
+    </data>
+    
+    
+</odoo>

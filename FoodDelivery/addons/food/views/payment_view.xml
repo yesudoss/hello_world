@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+        <record id="payment_form" model="ir.ui.view">
+            <field name="name">payment.details.form</field>
+            <field name="model">payment.details</field>
+            <field name="arch" type="xml">
+                <form>
+                	 <header>
+                         <button name="action_draft" type="object"
+                                string="Set Draft" class="oe_highlight"
+                                attrs="{'invisible':[('status','in',['draft', 'done'])]}" groups="base.group_erp_manager"/>
+
+                        <!--  <button name="action_done" type="object"
+                                string="Set Done" class="oe_highlight"
+                                attrs="{'invisible':[('status','in',['done'])]}"/> -->
+
+                         <field name="status" widget="statusbar" statusbar_visible="draft, done"></field>
+                    </header>
+                	
+                	
+                    <sheet>
+                    	<!-- <widget name="web_ribbon" text="Male" bg_color="bg-danger" attrs="{'invisible': [('gender', 'in', ['female', 'transgender'])]}"/>
+                    <widget name="web_ribbon" text="Female" bg_color="bg-danger" attrs="{'invisible': [('gender', 'in', ['male', 'transgender'])]}"/>
+                    <widget name="web_ribbon" text="Transgender" bg_color="bg-danger" attrs="{'invisible': [('gender', '=', ['male', 'female'])]}"/> -->
+						<widget name="web_ribbon" text="Paid" bg-color="bg-danger" attrs="{'invisible': [('status','=','draft')]}"/>
+						<widget name="web_ribbon" text="Draft" bg-color="bg-danger" attrs="{'invisible': [('status','=','done')]}"/>
+                     <div class="oe_title">
+                            <h1>
+                                <!-- <field name="name_id" placeholder="Customer's Name" required="True"/> -->
+                            </h1>
+                            <h2>
+                            	<field name="payment_seq"/>
+                            </h2>
+                             <h2>
+                                <field name="order_id" context="{'default_name_id': active_id}"></field>
+                            </h2>
+<!--                          		<field name="maj_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+ -->                         </div>
+                        <group>
+                        	<group>
+ 	 							<field name="date_time"/>
+ 	 							<field name="currency_id" invisible="True"/>
+ 	 							<field name="total"/>
+                        	</group>
+                        </group>   
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <!-- <field name="activity_ids" widget="mail_activity"/> -->
+                        <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>
+                  </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_payment_search" model="ir.ui.view">
+            <field name="name">payment.details.search</field>
+            <field name="model">payment.details</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="order_id"/>
+                   <!--  <field name="name_id"/> -->
+               </search>
+            </field>
+        </record>
+
+
+        <record id="orders_tree" model="ir.ui.view">
+            <field name="name">payment.details.tree</field>
+            <field name="model">payment.details</field>
+            <field name="arch" type="xml">
+                <!-- <tree editable="top" string="Timesheet Activities"> -->
+                <tree>
+               	 	<field name="payment_seq"/>
+                    <field name="order_id"/>
+                    <field name="date_time"/>
+                    <!-- <field name="name_id"/> -->
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="payment_action" model="ir.actions.act_window">
+            <field name="name">Payment Details</field>
+            <field name="res_model">payment.details</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="help" type="html">
+                <p class="oe_view_noncontent_create">
+                    Click create to add Payments
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

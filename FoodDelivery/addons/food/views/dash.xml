@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+<!--     <record id="action_graph" model="ir.actions.act_window">
+        <field name="name">CAR GRAPH</field>
+        <field name="res_model">orders.details</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="food.car_graph"/>
+    </record>
+ -->	
+	 <record id="orders_graph_action" model="ir.actions.act_window">
+            <field name="name">Order Details Graph</field>
+            <field name="res_model">orders.details</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="food.view_ordered_product_graph"/>
+	</record>
+
+    <!--  <record id="action_car_company" model="ir.actions.act_window">
+        <field name="name">CAR COMPANY</field>
+        <field name="res_model">car.company</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="food.FORM_CAR_COMPANY"/>
+    </record>-->
+
+
+    <record id="action_orders_food" model="ir.actions.act_window">
+        <field name="name">Food Orders</field>
+        <field name="res_model">orders.details</field>
+        <field name="view_mode">calendar,tree,form</field>
+    </record> 
+
+    <record id="dashboard_reporting_form_view" model="ir.ui.view">
+        <field name="name">Food Orders Dashboard Form</field>
+        <field name="model">board.board</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string=" Food Reporting Dashboard">
+                <board style="2-1">
+                    <column>
+                        <action
+                            string="Food Orders Graph"
+                            name="%(food.orders_graph_action)d"/>
+                    	<action
+                            string="Food"
+                            name="%(food.action_orders_food)d"/>
+                    </column>
+
+                </board>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_reporting_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard-Reporting</field>
+        <field name="res_model">board.board</field>
+        <field name="view_mode">form</field>
+        <field name="usage">menu</field>
+        <field name="view_id" ref="dashboard_reporting_form_view"/>
+    </record>
+
+        <menuitem id="menu_reporting" name="Reporting"  sequence="" parent="orders_menu"/>
+        <menuitem id="menu_report" name="Report" action="action_reporting_dashboard"   parent="menu_reporting"/>
+
+
+</odoo>

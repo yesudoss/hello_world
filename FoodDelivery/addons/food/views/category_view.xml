@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+        <record id="category_form" model="ir.ui.view">
+            <field name="name">category.details.form</field>
+            <field name="model">category.details</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    		<button name="fetch_prod" type="object" class="oe_stat_button" icon="fa-list-ul">
+                                <field string="Products" name="count" widget="statinfo"/>
+                            </button>
+                    	</div>
+                    <div class="oe_title">
+                    	<h1>
+                    		<field name="name"></field>
+                    	</h1>
+                    </div>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <!-- <field name="activity_ids" widget="mail_activity"/> -->
+                        <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>
+                  </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_category_search" model="ir.ui.view">
+            <field name="name">category.details.search</field>
+            <field name="model">category.details</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+               </search>
+            </field>
+        </record>
+
+
+        <record id="category_tree" model="ir.ui.view">
+            <field name="name">category.details.tree</field>
+            <field name="model">category.details</field>
+            <field name="arch" type="xml">
+                <!-- <tree editable="top" string="Timesheet Activities"> -->
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="category_action" model="ir.actions.act_window">
+            <field name="name">Category Details</field>
+            <field name="res_model">category.details</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="help" type="html">
+                <p class="oe_view_noncontent_smiling_face">
+                    Click create to add Category
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

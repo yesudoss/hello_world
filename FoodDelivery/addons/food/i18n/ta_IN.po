@@ -1,0 +1,1264 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* food
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-19 05:53+0000\n"
+"PO-Revision-Date: 2021-01-19 05:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: food
+#: model:mail.template,body_html:food.food_order_email_template
+msgid ""
+"\n"
+"\t\t\t\t<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"   \t\t\t\t\tHello ${(object.name_id.name)}!! <br/>\n"
+"   \t\t\t\t\tGreetings from our Online Food Delivery System, Have a nice day!! <br/>\n"
+"   \t\t\t\t\tHere you will find invoice PDF!\n"
+"   \t\t\t\t\tThank you!!\n"
+"\t\t\t\t</div>\n"
+"            "
+msgstr ""
+
+#. module: food
+#: model:ir.actions.report,print_report_name:food.date_report
+msgid "\"Date Based Report\""
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.order_date_template
+msgid "&amp;nbsp;*"
+msgstr ""
+
+#. module: food
+#: model:ir.actions.report,print_report_name:food.action_order_invoice_document
+#: model:ir.actions.report,print_report_name:food.ordered_report
+msgid "(object.order_seq)"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_template
+msgid "<b>Order Details</b>"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.kanban_view_products
+msgid ""
+"<span class=\"fa fa-circle text-danger\" role=\"img\" aria-label=\"Not "
+"Available\" title=\"Not Available\" name=\"not_available\"/>"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.kanban_view_products
+msgid ""
+"<span class=\"fa fa-circle text-success\" role=\"img\" aria-"
+"label=\"Available\" title=\"Available\" name=\"available\"/>"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.report_order_invoice_document
+msgid "<span>Customer Name:</span>"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.report_order_invoice_document
+msgid "<span>Invoice # </span>"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.report_order_invoice_document
+msgid ""
+"<strong>Order Date:</strong><br/>\n"
+"\t\t\t\t\t\t<strong>Order Status:</strong><br/>\n"
+"\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<br/>"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_template
+#: model_terms:ir.ui.view,arch_db:food.report_order_invoice_document
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_needaction
+#: model:ir.model.fields,field_description:food.field_orders_details__message_needaction
+#: model:ir.model.fields,field_description:food.field_payment_details__message_needaction
+#: model:ir.model.fields,field_description:food.field_products_details__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__amount_total
+#: model:ir.model.fields,field_description:food.field_payment_details__total
+#: model:ir.model.fields,field_description:food.field_payments_wizard__total
+msgid "Amount Total"
+msgstr "தொகை மொத்தம்"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_attachment_count
+#: model:ir.model.fields,field_description:food.field_orders_details__message_attachment_count
+#: model:ir.model.fields,field_description:food.field_payment_details__message_attachment_count
+#: model:ir.model.fields,field_description:food.field_products_details__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields.selection,name:food.selection__products_details__status__available
+#: model_terms:ir.ui.view,arch_db:food.products_tree
+msgid "Available"
+msgstr "கிடைக்கிறது"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_thanks
+msgid "Back to Products"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields.selection,name:food.selection__orders_details__status__cancel
+#: model_terms:ir.ui.view,arch_db:food.view_date_wizard
+#: model_terms:ir.ui.view,arch_db:food.view_order_details_tree
+#: model_terms:ir.ui.view,arch_db:food.view_payments_wizard
+#: model_terms:ir.ui.view,arch_db:food.view_product_update_wizard
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#. module: food
+#: model:ir.ui.menu,name:food.category_menu
+#: model_terms:ir.ui.view,arch_db:food.view_products_search
+msgid "Categories"
+msgstr "வகைகள்"
+
+#. module: food
+#. openerp-web
+#: code:addons/food/static/src/xml/food_dashboard_template.xml:0
+#: code:addons/food/static/src/xml/sample_template.xml:0
+#: model:ir.model.fields,field_description:food.field_products_details__category_id
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__category_id
+#: model_terms:ir.ui.view,arch_db:food.product_template
+#: model_terms:ir.ui.view,arch_db:food.products_create
+#: model_terms:ir.ui.view,arch_db:food.products_edit
+#: model_terms:ir.ui.view,arch_db:food.template_products_details
+#: model_terms:ir.ui.view,arch_db:food.view_products_search
+#, python-format
+msgid "Category"
+msgstr "வகை"
+
+#. module: food
+#: model:ir.actions.act_window,name:food.category_action
+#: model:ir.actions.act_window,name:food.res_partner_action
+msgid "Category Details"
+msgstr "வகை விவரங்கள்"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__city
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "City"
+msgstr "நகரம்"
+
+#. module: food
+#: model_terms:ir.actions.act_window,help:food.category_action
+#: model_terms:ir.actions.act_window,help:food.res_partner_action
+msgid "Click create to add Category"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.actions.act_window,help:food.payment_action
+msgid "Click create to add Payments"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.actions.act_window,help:food.products_action
+msgid "Click create to add Products"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "Click to Pay"
+msgstr "செலுத்த கிளிக் செய்க"
+
+#. module: food
+#. openerp-web
+#: code:addons/food/static/src/xml/food_dashboard_template.xml:0
+#, python-format
+msgid "Click to see Products"
+msgstr ""
+
+#. module: food
+#: model:ir.ui.menu,name:food.config_menu
+msgid "Configuration"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields.selection,name:food.selection__orders_details__status__confirm
+msgid "Confirm"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.order_date_template
+msgid "Contact"
+msgstr "தொடர்பு எண்"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_template
+msgid "Contact No"
+msgstr "தொடர்பு எண்"
+
+#. module: food
+#. openerp-web
+#: code:addons/food/static/src/xml/food_dashboard_template.xml:0
+#: code:addons/food/static/src/xml/sample_template.xml:0
+#: model:ir.model.fields,field_description:food.field_orderline_details__cost
+#: model:ir.model.fields,field_description:food.field_products_details__cost
+#: model_terms:ir.ui.view,arch_db:food.report_order_invoice_document
+#: model_terms:ir.ui.view,arch_db:food.template_products_details
+#, python-format
+msgid "Cost"
+msgstr "தொகை"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__count
+#: model:ir.model.fields,field_description:food.field_products_details__count
+msgid "Count"
+msgstr "எண்ணிக்கை"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__country_id
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "Country"
+msgstr "நாடு"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.product_template
+msgid "Create"
+msgstr "உருவாக்கு"
+
+#. module: food
+#: model_terms:ir.actions.act_window,help:food.orders_action
+msgid "Create a new product"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__create_uid
+#: model:ir.model.fields,field_description:food.field_date_wizard__create_uid
+#: model:ir.model.fields,field_description:food.field_orderline_details__create_uid
+#: model:ir.model.fields,field_description:food.field_orders_details__create_uid
+#: model:ir.model.fields,field_description:food.field_payment_details__create_uid
+#: model:ir.model.fields,field_description:food.field_payments_wizard__create_uid
+#: model:ir.model.fields,field_description:food.field_products_details__create_uid
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__create_date
+#: model:ir.model.fields,field_description:food.field_date_wizard__create_date
+#: model:ir.model.fields,field_description:food.field_orderline_details__create_date
+#: model:ir.model.fields,field_description:food.field_orders_details__create_date
+#: model:ir.model.fields,field_description:food.field_payment_details__create_date
+#: model:ir.model.fields,field_description:food.field_payments_wizard__create_date
+#: model:ir.model.fields,field_description:food.field_products_details__create_date
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orderline_details__currency_id
+#: model:ir.model.fields,field_description:food.field_orders_details__currency_id
+#: model:ir.model.fields,field_description:food.field_payment_details__currency_id
+#: model:ir.model.fields,field_description:food.field_payments_wizard__currency_id
+#: model:ir.model.fields,field_description:food.field_products_details__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__currency_id
+msgid "Currency Type"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_payment_details__order_id
+#: model:res.groups,name:food.food_customer_role
+msgid "Customer"
+msgstr "வாடிக்கையாளர்"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.order_date_template
+#: model_terms:ir.ui.view,arch_db:food.orders_template
+msgid "Customer Name"
+msgstr "வாடிக்கையாளர் பெயர்"
+
+#. module: food
+#: model:mail.template,report_name:food.food_order_email_template
+msgid "Customer order_${(object.name_id.name)}"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "Customer's Name"
+msgstr "வாடிக்கையாளரின் பெயர்"
+
+#. module: food
+#: model:ir.ui.menu,name:food.dashboard_menu
+msgid "Dashboard"
+msgstr "டாஷ்போர்டு"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__date_time
+#: model:ir.model.fields,field_description:food.field_payment_details__date_time
+msgid "Date Time"
+msgstr "தேதி & நேரம்"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "Delivery Address"
+msgstr "விநியோக முகவரி"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.report_order_invoice_document
+msgid "Delivery Address:"
+msgstr "விநியோக முகவரி"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_products_details__description
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__description
+#: model_terms:ir.ui.view,arch_db:food.products_create
+#: model_terms:ir.ui.view,arch_db:food.products_edit
+msgid "Description"
+msgstr "விளக்கம்"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__display_name
+#: model:ir.model.fields,field_description:food.field_date_wizard__display_name
+#: model:ir.model.fields,field_description:food.field_orderline_details__display_name
+#: model:ir.model.fields,field_description:food.field_orders_details__display_name
+#: model:ir.model.fields,field_description:food.field_payment_details__display_name
+#: model:ir.model.fields,field_description:food.field_payments_wizard__display_name
+#: model:ir.model.fields,field_description:food.field_products_details__display_name
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__display_name
+#: model:ir.model.fields,field_description:food.field_report_food_order_date_template__display_name
+#: model:ir.model.fields,field_description:food.field_report_food_order_xls__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields.selection,name:food.selection__payment_details__status__done
+msgid "Done"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields.selection,name:food.selection__orders_details__status__draft
+#: model:ir.model.fields.selection,name:food.selection__payment_details__status__draft
+msgid "Draft"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.product_template
+msgid "Edit"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.products_edit
+msgid "Edit Product"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__email
+#: model_terms:ir.ui.view,arch_db:food.order_date_template
+#: model_terms:ir.ui.view,arch_db:food.orders_template
+#: model_terms:ir.ui.view,arch_db:food.template_create_feedback
+msgid "Email"
+msgstr "மின்னஞ்சல்"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__cost
+msgid "Fare"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_create_feedback
+#: model:website.menu,name:food.feedbacks_website_menu
+msgid "Feedback"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_create_feedback
+msgid "Feedback Form"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_follower_ids
+#: model:ir.model.fields,field_description:food.field_orders_details__message_follower_ids
+#: model:ir.model.fields,field_description:food.field_payment_details__message_follower_ids
+#: model:ir.model.fields,field_description:food.field_products_details__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_channel_ids
+#: model:ir.model.fields,field_description:food.field_orders_details__message_channel_ids
+#: model:ir.model.fields,field_description:food.field_payment_details__message_channel_ids
+#: model:ir.model.fields,field_description:food.field_products_details__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_partner_ids
+#: model:ir.model.fields,field_description:food.field_orders_details__message_partner_ids
+#: model:ir.model.fields,field_description:food.field_payment_details__message_partner_ids
+#: model:ir.model.fields,field_description:food.field_products_details__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: food
+#: model:ir.actions.client,name:food.action_food_client_view
+msgid "Food"
+msgstr "உணவு"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.product_template
+msgid "Food Cost"
+msgstr "உணவு தொகை"
+
+#. module: food
+#: model:ir.module.category,description:food.module_category_food_delivery_role
+msgid "Food Delivery System"
+msgstr ""
+
+#. module: food
+#: model:ir.actions.report,name:food.action_order_invoice_document
+#: model:mail.template,subject:food.food_order_email_template
+msgid "Food Order Invoice"
+msgstr ""
+
+#. module: food
+#: model:ir.ui.menu,name:food.orders_menu
+msgid "Food Orders"
+msgstr "உணவு ஆர்டர்கள்"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_products_details
+msgid "Food Product Details"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+#: model_terms:ir.ui.view,arch_db:food.product_template
+msgid "Food Products"
+msgstr "உணவு பொருட்கள்"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.product_template
+#: model_terms:ir.ui.view,arch_db:food.products_create
+#: model_terms:ir.ui.view,arch_db:food.products_edit
+msgid "Food Type"
+msgstr "உணவு வகை"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_date_wizard__from_date
+msgid "From Date"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.view_date_wizard
+msgid "Get Order Report"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.view_products_search
+msgid "Group By"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__id
+#: model:ir.model.fields,field_description:food.field_date_wizard__id
+#: model:ir.model.fields,field_description:food.field_orderline_details__id
+#: model:ir.model.fields,field_description:food.field_orders_details__id
+#: model:ir.model.fields,field_description:food.field_payment_details__id
+#: model:ir.model.fields,field_description:food.field_payments_wizard__id
+#: model:ir.model.fields,field_description:food.field_products_details__id
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__id
+#: model:ir.model.fields,field_description:food.field_report_food_order_date_template__id
+#: model:ir.model.fields,field_description:food.field_report_food_order_xls__id
+msgid "ID"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,help:food.field_orders_details__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,help:food.field_category_details__message_needaction
+#: model:ir.model.fields,help:food.field_category_details__message_unread
+#: model:ir.model.fields,help:food.field_orders_details__message_needaction
+#: model:ir.model.fields,help:food.field_orders_details__message_unread
+#: model:ir.model.fields,help:food.field_payment_details__message_needaction
+#: model:ir.model.fields,help:food.field_payment_details__message_unread
+#: model:ir.model.fields,help:food.field_products_details__message_needaction
+#: model:ir.model.fields,help:food.field_products_details__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,help:food.field_category_details__message_has_error
+#: model:ir.model.fields,help:food.field_category_details__message_has_sms_error
+#: model:ir.model.fields,help:food.field_orders_details__message_has_error
+#: model:ir.model.fields,help:food.field_orders_details__message_has_sms_error
+#: model:ir.model.fields,help:food.field_payment_details__message_has_error
+#: model:ir.model.fields,help:food.field_payment_details__message_has_sms_error
+#: model:ir.model.fields,help:food.field_products_details__message_has_error
+#: model:ir.model.fields,help:food.field_products_details__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_products_details
+msgid "Image"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_products_details__img
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__img
+msgid "Img"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_is_follower
+#: model:ir.model.fields,field_description:food.field_orders_details__message_is_follower
+#: model:ir.model.fields,field_description:food.field_payment_details__message_is_follower
+#: model:ir.model.fields,field_description:food.field_products_details__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details____last_update
+#: model:ir.model.fields,field_description:food.field_date_wizard____last_update
+#: model:ir.model.fields,field_description:food.field_orderline_details____last_update
+#: model:ir.model.fields,field_description:food.field_orders_details____last_update
+#: model:ir.model.fields,field_description:food.field_payment_details____last_update
+#: model:ir.model.fields,field_description:food.field_payments_wizard____last_update
+#: model:ir.model.fields,field_description:food.field_products_details____last_update
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard____last_update
+#: model:ir.model.fields,field_description:food.field_report_food_order_date_template____last_update
+#: model:ir.model.fields,field_description:food.field_report_food_order_xls____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__write_uid
+#: model:ir.model.fields,field_description:food.field_date_wizard__write_uid
+#: model:ir.model.fields,field_description:food.field_orderline_details__write_uid
+#: model:ir.model.fields,field_description:food.field_orders_details__write_uid
+#: model:ir.model.fields,field_description:food.field_payment_details__write_uid
+#: model:ir.model.fields,field_description:food.field_payments_wizard__write_uid
+#: model:ir.model.fields,field_description:food.field_products_details__write_uid
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__write_date
+#: model:ir.model.fields,field_description:food.field_date_wizard__write_date
+#: model:ir.model.fields,field_description:food.field_orderline_details__write_date
+#: model:ir.model.fields,field_description:food.field_orders_details__write_date
+#: model:ir.model.fields,field_description:food.field_payment_details__write_date
+#: model:ir.model.fields,field_description:food.field_payments_wizard__write_date
+#: model:ir.model.fields,field_description:food.field_products_details__write_date
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_main_attachment_id
+#: model:ir.model.fields,field_description:food.field_orders_details__message_main_attachment_id
+#: model:ir.model.fields,field_description:food.field_payment_details__message_main_attachment_id
+#: model:ir.model.fields,field_description:food.field_products_details__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.view_payments_wizard
+msgid "Make Payment"
+msgstr "பணம் கட்டு"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_has_error
+#: model:ir.model.fields,field_description:food.field_orders_details__message_has_error
+#: model:ir.model.fields,field_description:food.field_payment_details__message_has_error
+#: model:ir.model.fields,field_description:food.field_products_details__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_ids
+#: model:ir.model.fields,field_description:food.field_orders_details__message_ids
+#: model:ir.model.fields,field_description:food.field_payment_details__message_ids
+#: model:ir.model.fields,field_description:food.field_products_details__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: food
+#. openerp-web
+#: code:addons/food/static/src/xml/food_dashboard_template.xml:0
+#: code:addons/food/static/src/xml/sample_template.xml:0
+#: model:ir.model.fields,field_description:food.field_category_details__name
+#: model:ir.model.fields,field_description:food.field_orders_details__name_id
+#: model:ir.model.fields,field_description:food.field_payments_wizard__name_id
+#: model:ir.model.fields,field_description:food.field_products_details__name
+#: model_terms:ir.ui.view,arch_db:food.product_template
+#: model_terms:ir.ui.view,arch_db:food.template_products_details
+#, python-format
+msgid "Name"
+msgstr "பெயர்"
+
+#. module: food
+#: code:addons/food/models/orders.py:0 code:addons/food/models/orders.py:0
+#: code:addons/food/models/orders.py:0 code:addons/food/models/payment.py:0
+#: code:addons/food/models/payment.py:0 code:addons/food/models/payment.py:0
+#, python-format
+msgid "New"
+msgstr "புதியது"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.products_create
+#: model_terms:ir.ui.view,arch_db:food.products_edit
+msgid "Non Vegetarian"
+msgstr "அசைவம்"
+
+#. module: food
+#: model:ir.model.fields.selection,name:food.selection__products_details__type__non_veg
+#: model:ir.model.fields.selection,name:food.selection__productupdate_wizard__type__non_veg
+msgid "Non-Vegetarian"
+msgstr "அசைவம்"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.view_products_search
+msgid "Non-veg"
+msgstr "அசைவம்"
+
+#. module: food
+#: model:ir.model.fields.selection,name:food.selection__products_details__status__not_available
+#: model_terms:ir.ui.view,arch_db:food.products_tree
+msgid "Not Available"
+msgstr "கிடைக்கவில்லை"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_needaction_counter
+#: model:ir.model.fields,field_description:food.field_orders_details__message_needaction_counter
+#: model:ir.model.fields,field_description:food.field_payment_details__message_needaction_counter
+#: model:ir.model.fields,field_description:food.field_products_details__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_has_error_counter
+#: model:ir.model.fields,field_description:food.field_orders_details__message_has_error_counter
+#: model:ir.model.fields,field_description:food.field_payment_details__message_has_error_counter
+#: model:ir.model.fields,field_description:food.field_products_details__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,help:food.field_category_details__message_needaction_counter
+#: model:ir.model.fields,help:food.field_orders_details__message_needaction_counter
+#: model:ir.model.fields,help:food.field_payment_details__message_needaction_counter
+#: model:ir.model.fields,help:food.field_products_details__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,help:food.field_category_details__message_has_error_counter
+#: model:ir.model.fields,help:food.field_orders_details__message_has_error_counter
+#: model:ir.model.fields,help:food.field_payment_details__message_has_error_counter
+#: model:ir.model.fields,help:food.field_products_details__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,help:food.field_category_details__message_unread_counter
+#: model:ir.model.fields,help:food.field_orders_details__message_unread_counter
+#: model:ir.model.fields,help:food.field_payment_details__message_unread_counter
+#: model:ir.model.fields,help:food.field_products_details__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: food
+#. openerp-web
+#: code:addons/food/static/src/xml/food_dashboard_template.xml:0
+#, python-format
+msgid "Online Food Delivery System"
+msgstr ""
+
+#. module: food
+#: model:ir.module.category,name:food.module_category_food_delivery_role
+msgid "Online Food Delivery System Main Roles"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.order_date_template
+#: model_terms:ir.ui.view,arch_db:food.orders_template
+msgid "Order Date"
+msgstr ""
+
+#. module: food
+#: model:ir.actions.act_window,name:food.date_wizard_details_action
+#: model:ir.actions.act_window,name:food.orders_action
+#: model:ir.ui.menu,name:food.date_wizard_menu
+#: model_terms:ir.ui.view,arch_db:food.view_date_wizard
+msgid "Order Details"
+msgstr "ஆர்டர் விவரங்கள்"
+
+#. module: food
+#: model:ir.actions.report,name:food.report_order_xls
+msgid "Order Details XLS"
+msgstr ""
+
+#. module: food
+#: model:ir.model,name:food.model_orderline_details
+#: model:ir.model.fields,field_description:food.field_orders_details__order_line_ids
+msgid "Order Line"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__order_seq
+#: model_terms:ir.ui.view,arch_db:food.orders_template
+msgid "Order Reference"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.order_date_template
+msgid "Order Sequence"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orderline_details__order_id
+msgid "Ordering Customer"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.order_view_calendar
+#: model_terms:ir.ui.view,arch_db:food.view_orders_details_pivot
+msgid "Orders"
+msgstr "ஆர்டர்கள்"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.activity_view_food_orders
+msgid "Orders Activity"
+msgstr ""
+
+#. module: food
+#: model:ir.actions.report,name:food.ordered_report
+msgid "Orders Report"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.order_date_template
+msgid "Orders between"
+msgstr ""
+
+#. module: food
+#: model:ir.ui.menu,name:food.pay_wizard_menu
+msgid "Payment"
+msgstr "கட்டணம்"
+
+#. module: food
+#: model:ir.actions.act_window,name:food.payment_action
+#: model_terms:ir.ui.view,arch_db:food.view_payments_wizard
+msgid "Payment Details"
+msgstr "கட்டண விவரங்கள்"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_payment_details__payment_seq
+msgid "Payment Reference"
+msgstr "கட்டண குறிப்பு"
+
+#. module: food
+#: model:ir.model,name:food.model_payment_details
+msgid "Payment details"
+msgstr "கட்டண விவரங்கள்"
+
+#. module: food
+#: model:ir.ui.menu,name:food.payment_menu
+msgid "Payments"
+msgstr "கட்டணம்"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__phone
+msgid "Phone"
+msgstr "தொலைபேசி"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_create_feedback
+msgid "Phone Number"
+msgstr "தொலைபேசி எண்"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "Print Report"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orderline_details__product_id
+#: model_terms:ir.ui.view,arch_db:food.products_create
+#: model_terms:ir.ui.view,arch_db:food.report_order_invoice_document
+msgid "Product"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.products_create
+#: model_terms:ir.ui.view,arch_db:food.products_edit
+msgid "Product Cost"
+msgstr ""
+
+#. module: food
+#: model:ir.actions.act_window,name:food.product_update_wizard_details_action
+#: model_terms:ir.ui.view,arch_db:food.template_products_details
+#: model_terms:ir.ui.view,arch_db:food.view_product_update_wizard
+msgid "Product Details"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.products_create
+#: model_terms:ir.ui.view,arch_db:food.products_edit
+msgid "Product Image"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__product_id
+#: model_terms:ir.ui.view,arch_db:food.products_create
+#: model_terms:ir.ui.view,arch_db:food.products_edit
+msgid "Product Name"
+msgstr ""
+
+#. module: food
+#: model:ir.ui.menu,name:food.product_update_wizard_menu
+msgid "Product Update"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.kanban_view_products
+#: model_terms:ir.ui.view,arch_db:food.products_form
+msgid "Product's Name"
+msgstr ""
+
+#. module: food
+#: code:addons/food/models/orders.py:0
+#: model:ir.ui.menu,name:food.products_menu
+#: model_terms:ir.ui.view,arch_db:food.category_form
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+#: model_terms:ir.ui.view,arch_db:food.products_edit
+#: model:website.menu,name:food.products_website_menu
+#, python-format
+msgid "Products"
+msgstr ""
+
+#. module: food
+#: model:ir.actions.act_window,name:food.products_action
+msgid "Products Details"
+msgstr ""
+
+#. module: food
+#: model:ir.model,name:food.model_products_details
+msgid "Products details"
+msgstr ""
+
+#. module: food
+#: code:addons/food/models/customers.py:0
+#, python-format
+msgid "Products in this Category"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orderline_details__quantity
+#: model_terms:ir.ui.view,arch_db:food.report_order_invoice_document
+msgid "Quantity"
+msgstr "அளவு"
+
+#. module: food
+#: model:ir.model.fields.selection,name:food.selection__orders_details__status__received
+#: model_terms:ir.ui.view,arch_db:food.view_order_details_tree
+msgid "Received"
+msgstr ""
+
+#. module: food
+#: model:ir.actions.report,name:food.date_report
+msgid "Registered orders"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.product_template
+msgid "Remove"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.order_date_template
+msgid "S.No"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_has_sms_error
+#: model:ir.model.fields,field_description:food.field_orders_details__message_has_sms_error
+#: model:ir.model.fields,field_description:food.field_payment_details__message_has_sms_error
+#: model:ir.model.fields,field_description:food.field_products_details__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.view_ordered_product_graph
+msgid "Sales Analysis"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__is_same
+msgid "Same as customer's address"
+msgstr ""
+
+#. module: food
+#: model:ir.actions.client,name:food.action_food_sample_client_view
+#: model:ir.ui.menu,name:food.dashboard_sample_menu
+msgid "Sample"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_create_feedback
+msgid "Send"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "Send invoice by mail"
+msgstr "விலைப்பட்டியல் அஞ்சல் மூலம் அனுப்பவும்"
+
+#. module: food
+#: model:ir.actions.server,name:food.action_sample_server
+#: model_terms:ir.ui.view,arch_db:food.products_form
+msgid "Set Available"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "Set Cancel"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "Set Confirmed"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+#: model_terms:ir.ui.view,arch_db:food.payment_form
+msgid "Set Draft"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.products_form
+msgid "Set Not Available"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "Set Received"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__state_id
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "State"
+msgstr "மாநிலம்"
+
+#. module: food
+#. openerp-web
+#: code:addons/food/static/src/xml/food_dashboard_template.xml:0
+#: code:addons/food/static/src/xml/sample_template.xml:0
+#: model:ir.model.fields,field_description:food.field_orders_details__status
+#: model:ir.model.fields,field_description:food.field_payment_details__status
+#: model:ir.model.fields,field_description:food.field_payment_details__status_id
+#: model:ir.model.fields,field_description:food.field_products_details__status
+#: model_terms:ir.ui.view,arch_db:food.orders_template
+#: model_terms:ir.ui.view,arch_db:food.product_template
+#, python-format
+msgid "Status"
+msgstr "நிலை"
+
+#. module: food
+#: model:ir.model.fields,help:food.field_orders_details__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__street
+msgid "Street"
+msgstr "தெரு"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "Street..."
+msgstr "தெரு"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orderline_details__sub_total
+#: model_terms:ir.ui.view,arch_db:food.report_order_invoice_document
+msgid "Sub Total"
+msgstr "கூட்டுத்தொகை"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_create_feedback
+msgid "Subject"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.products_create
+#: model_terms:ir.ui.view,arch_db:food.products_edit
+msgid "Submit"
+msgstr "சமர்ப்பிக்கவும்"
+
+#. module: food
+#. openerp-web
+#: code:addons/food/static/src/xml/food_dashboard_template.xml:0
+#, python-format
+msgid "Tasty and healthy"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_thanks
+msgid ""
+"Thank you!!! \n"
+"\t                           <br/>\n"
+"\t                           Have a Nice Day!"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_thanks
+msgid "Thanks"
+msgstr ""
+
+#. module: food
+#: model:ir.model,name:food.model_date_wizard
+msgid "This is the table for Date wizard"
+msgstr ""
+
+#. module: food
+#: model:ir.model,name:food.model_payments_wizard
+msgid "This is the table for Payment wizard"
+msgstr ""
+
+#. module: food
+#: model:ir.model,name:food.model_productupdate_wizard
+msgid "This is the table for Product update wizard"
+msgstr ""
+
+#. module: food
+#: model:ir.model,name:food.model_category_details
+msgid "This is the table to store category details"
+msgstr ""
+
+#. module: food
+#: model:ir.model,name:food.model_orders_details
+msgid "This is the table to store order details"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_date_wizard__to_date
+msgid "To Date"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.order_date_template
+msgid "Total"
+msgstr "மொத்தம்"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.order_date_template
+msgid "Total Amount"
+msgstr "மொத்த தொகை"
+
+#. module: food
+#. openerp-web
+#: code:addons/food/static/src/xml/food_dashboard_template.xml:0
+#: code:addons/food/static/src/xml/sample_template.xml:0
+#: model:ir.model.fields,field_description:food.field_products_details__type
+#: model:ir.model.fields,field_description:food.field_productupdate_wizard__type
+#: model_terms:ir.ui.view,arch_db:food.template_products_details
+#, python-format
+msgid "Type"
+msgstr "வகை"
+
+#. module: food
+#: model:ir.model.fields,help:food.field_orders_details__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_unread
+#: model:ir.model.fields,field_description:food.field_orders_details__message_unread
+#: model:ir.model.fields,field_description:food.field_payment_details__message_unread
+#: model:ir.model.fields,field_description:food.field_products_details__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__message_unread_counter
+#: model:ir.model.fields,field_description:food.field_orders_details__message_unread_counter
+#: model:ir.model.fields,field_description:food.field_payment_details__message_unread_counter
+#: model:ir.model.fields,field_description:food.field_products_details__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.view_product_update_wizard
+msgid "Update Product Details"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.actions.act_window,help:food.orders_action
+msgid "Users orders will be stored here. It seems there is no orderes yet."
+msgstr "பயனர்களின் ஆர்டர்கள் இங்கே சேமிக்கப்படும். இதுவரை எந்தவிதமான ஆர்டர்களும் இல்லை என்று தெரிகிறது.
+"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.view_products_search
+msgid "Veg"
+msgstr "சைவம்"
+
+#. module: food
+#: model:ir.model.fields.selection,name:food.selection__products_details__type__veg
+#: model_terms:ir.ui.view,arch_db:food.products_create
+#: model_terms:ir.ui.view,arch_db:food.products_edit
+msgid "Vegetarian"
+msgstr "சைவம்"
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_category_details__website_message_ids
+#: model:ir.model.fields,field_description:food.field_orders_details__website_message_ids
+#: model:ir.model.fields,field_description:food.field_payment_details__website_message_ids
+#: model:ir.model.fields,field_description:food.field_products_details__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,help:food.field_category_details__website_message_ids
+#: model:ir.model.fields,help:food.field_orders_details__website_message_ids
+#: model:ir.model.fields,help:food.field_payment_details__website_message_ids
+#: model:ir.model.fields,help:food.field_products_details__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: food
+#: model:ir.ui.menu,name:food.menu_wizard
+msgid "Wizard"
+msgstr ""
+
+#. module: food
+#: code:addons/food/models/orders.py:0
+#, python-format
+msgid "You cannot delete these confirmed/Received records"
+msgstr "உறுதிப்படுத்தப்பட்ட / பெறப்பட்ட இந்த பதிவுகளை நீங்கள் நீக்க முடியாது"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_create_feedback
+msgid "Your Name"
+msgstr "உங்கள் பெயர்"
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.template_create_feedback
+msgid "Your Suggestion"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.orders_form
+msgid "ZIP"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields,field_description:food.field_orders_details__zip
+msgid "Zip"
+msgstr ""
+
+#. module: food
+#: model:ir.module.category,name:food.module_category_tools
+msgid "food.delivery.details.sequence"
+msgstr ""
+
+#. module: food
+#: model:ir.actions.act_window,name:food.payments_wizard_details_action
+msgid "payment"
+msgstr "கட்டணம்"
+
+#. module: food
+#: model:ir.model,name:food.model_report_food_order_date_template
+msgid "report.food.order_date_template"
+msgstr ""
+
+#. module: food
+#: model:ir.model,name:food.model_report_food_order_xls
+msgid "report.food.order_xls"
+msgstr ""
+
+#. module: food
+#: model:ir.ui.menu,name:food.res_partner_menu
+msgid "res"
+msgstr ""
+
+#. module: food
+#: model_terms:ir.ui.view,arch_db:food.order_date_template
+msgid "to"
+msgstr ""
+
+#. module: food
+#: model:ir.model.fields.selection,name:food.selection__productupdate_wizard__type__veg
+msgid "vegetarian"
+msgstr "சைவம்"

@@ -61,3 +61,4 @@ class Category(models.Model):
             'view_mode': 'tree,form',
             'type': 'ir.actions.act_window',
         }
+# Comment
